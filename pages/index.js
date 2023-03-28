@@ -9,6 +9,7 @@ import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
+import GoToTop from "../components/GoToTop";
 
 export default function Home() {
 	return (
@@ -24,6 +25,7 @@ export default function Home() {
 			</Head>
 			<Header />
 			<main>
+				
 				<section id="hero" className="snap-start">
 					<Hero />
 				</section>
@@ -47,6 +49,7 @@ export default function Home() {
 				<section id="contact" className="snap-start">
 					<ContactMe />
 				</section>
+				<GoToTop />
 			</main>
 		</div>
 	);
