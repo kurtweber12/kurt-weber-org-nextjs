@@ -40,8 +40,8 @@ const Header = () => {
 					<Link href="#about">
 						<button className="heroButton">About</button>
 					</Link>
-					<Link href="#experience">
-						<button className="heroButton">Experience</button>
+					<Link href="#education">
+						<button className="heroButton">Education</button>
 					</Link>
 					<Link href="#skills">
 						<button className="heroButton">Skills</button>
@@ -70,14 +70,17 @@ const Header = () => {
 						fgColor="#737373"
 						url="https://github.com/kurtweber12"
 					/>
+					<div className="border-r border-[#737373] h-8" />
 					<SocialIcon
 						bgColor="transparent"
 						fgColor="#737373"
 						url="https://www.linkedin.com/in/kurt-weber-48153814a/"
 					/>
-
+					<div className="border-r border-[#737373] h-8" />
 					<Link href="#contact">
-						<button>Contact</button>
+						<button className="text-[#737373] text-xl font-medium pl-2">
+							Contact
+						</button>
 						{/* <SocialIcon
 							className="cursor-pointer"
 							network="email"
@@ -86,6 +89,7 @@ const Header = () => {
 						/> */}
 						{/* <p className='uppercase hidden md:inline-flex text-sm text-neutral-500'>Get In Touch</p> */}
 					</Link>
+					<SocialIcon bgColor="transparent" fgColor="#737373" network="email" />
 				</motion.div>
 			</div>
 			<motion.div

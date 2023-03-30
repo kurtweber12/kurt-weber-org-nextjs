@@ -10,7 +10,7 @@ const Projects = () => {
 			transition={{ duration: 1.5 }}
 			className="relative h-screen flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
 		>
-			<h3 className="absolute top-24 uppercase tracking-[20px] text-neutral-500 text-2xl">
+			<h3 className="absolute top-24 uppercase tracking-[20px] ml-[20px] text-neutral-500 text-2xl">
 				Projects
 			</h3>
 
@@ -26,7 +26,7 @@ const Projects = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 							src="https://res.cloudinary.com/practicaldev/image/fetch/s--i_xQkWHO--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/207/23eb8886-4b62-4a01-ac2b-7aafb500ad26.png"
-							alt=""
+							alt="project"
 						/>
 						<div className="space-y-10 px-0 md:px-10 max-w-6xl">
 							<h4 className="text-4xl font-semibold text-center">

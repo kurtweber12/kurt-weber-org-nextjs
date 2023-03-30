@@ -30,7 +30,7 @@ const ExperienceCard = () => {
 			</motion.div>
 
 			<div className="px-0 md:px-10 xl:py-10">
-				<h4 className="text-4xl font-light">CEO</h4>
+				<h4 className="text-4xl font-light">Project Name</h4>
 				<p className="font-bold text-2xl mt-1">Amazon</p>
 				<div className="flex space-x-2 my-2">
 					<Image
@@ -44,20 +44,6 @@ const ExperienceCard = () => {
 				<p className="uppercase py-5 text-neutral-400">
 					Started Date... Ended Date
 				</p>
-				<ul className="list-disc space-y-4 ml-5 text-lg">
-					<li>point 1</li>
-					<li>point 2</li>
-					<li>point 3</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-					<li>point 4</li>
-				</ul>
 			</div>
 		</article>
 	);
