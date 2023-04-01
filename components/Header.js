@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 import Link from "next/link";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
 // add a social icon for github
 // add a section with a todo list for projects
@@ -77,10 +78,11 @@ const Header = () => {
 						url="https://www.linkedin.com/in/kurt-weber-48153814a/"
 					/>
 					<div className="border-r border-[#737373] h-8" />
-					<Link href="#contact">
-						<button className="text-[#737373] text-xl font-medium pl-2">
+					<Link href="#contact" className="flex flex-row flex-shrink-0">
+						{/* <p className="text-[#737373] text-xl font-light tracking-wider pl-2">
 							Contact
-						</button>
+						</p> */}
+						<EnvelopeIcon className="h-8 w-8 mx-2 " color="#737373" />
 						{/* <SocialIcon
 							className="cursor-pointer"
 							network="email"
@@ -89,7 +91,7 @@ const Header = () => {
 						/> */}
 						{/* <p className='uppercase hidden md:inline-flex text-sm text-neutral-500'>Get In Touch</p> */}
 					</Link>
-					<SocialIcon bgColor="transparent" fgColor="#737373" network="email" />
+					{/* <SocialIcon bgColor="transparent" fgColor="#737373" network="email" /> */}
 				</motion.div>
 			</div>
 			<motion.div

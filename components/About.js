@@ -18,7 +18,7 @@ const About = ({ text, image }) => {
 				About
 			</h3>
 
-			<div className="mt-32 md:mt-48 flex flex-col text-center md:text-left lg:flex-row w-[90%] md:max-w-7xl md:px-10 justify-evenly  items-center lg:items-start pt-4 mb-96">
+			<div className="mt-32 md:mt-48 flex flex-col text-center md:text-left lg:flex-row w-[90%] md:max-w-7xl md:px-10 justify-evenly items-center lg:items-start pt-4 mb-96">
 				<motion.div
 					initial={{
 						x: -200,

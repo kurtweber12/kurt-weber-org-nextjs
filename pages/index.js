@@ -14,25 +14,38 @@ import Education from "../components/Education";
 import {
 	fetchAboutMe,
 	fetchEducation,
+	fetchProjects,
 	fetchSkills,
+	fetchContact,
 } from "../fetchSanity/fetchAboutMe";
 import { useEffect } from "react";
+import ProjectsNew from "../components/ProjectsNew";
 
 export const getStaticProps = async () => {
 	const aboutMe = await fetchAboutMe();
 	const skills = await fetchSkills();
 	const education = await fetchEducation();
+	const projects = await fetchProjects();
+	const contact = await fetchContact();
 
 	return {
 		props: {
 			aboutMe,
 			skills,
 			education,
+			projects,
+			contact,
 		},
 	};
 };
 
-export default function Home({ aboutMe, skills, education }) {
+export default function Home({
+	aboutMe,
+	skills,
+	education,
+	projects,
+	contact,
+}) {
 	useEffect(() => {
 		//console.log(aboutMe.about[0].body[0].children[0].text);
 		//console.log(aboutMe.about[0]);
@@ -52,7 +65,7 @@ export default function Home({ aboutMe, skills, education }) {
 			<Header />
 			<main>
 				<section id="hero" className="snap-start">
-					<Hero />
+					<Hero data={aboutMe} />
 				</section>
 
 				<section id="about" className="snap-start">
@@ -66,20 +79,23 @@ export default function Home({ aboutMe, skills, education }) {
 					<Education education={education.education} />
 				</section>
 
-				<section id="experience" className="snap-center">
+				{/* <section id="experience" className="snap-center">
 					<Experience />
-				</section>
+				</section> */}
 
 				<section id="skills" className="snap-start">
 					<Skills skills={skills.skills} />
 				</section>
 
-				<section id="projects" className="snap-start">
+				{/* <section id="projects" className="snap-start">
 					<Projects />
+				</section> */}
+				<section id="projects" className="snap-start">
+					<ProjectsNew projects={projects.projects} />
 				</section>
 
 				<section id="contact" className="snap-start">
-					<ContactMe />
+					<ContactMe contact={contact.contact[0]} />
 				</section>
 			</main>
 			<GoToTop />

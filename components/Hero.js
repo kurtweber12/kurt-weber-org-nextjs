@@ -9,12 +9,7 @@ import BackgroundCircles from "./BackgroundCircles";
 
 const Hero = () => {
 	const [text, count] = useTypewriter({
-		words: [
-			"",
-			"Griffin sucks",
-			"Stone leaves the game",
-			"Lurt hates them both",
-		],
+		words: ["", "UF grad", "Loves to learn", "Hockey fan"],
 		loop: true,
 		delaySpeed: 2000,
 	});
@@ -42,7 +37,7 @@ const Hero = () => {
             > */}
 			<div className="z-20">
 				<h2 className="text-sm uppercase text-neutral-500 pd-2 tracking-[15px] ml-[15px]">
-					Software Engineer
+					Kurt Weber's Portfolio
 				</h2>
 				<h1 className="text-5xl lg:text-6xl font-semibold px-10">
 					<span className="mr-2">{text}</span>

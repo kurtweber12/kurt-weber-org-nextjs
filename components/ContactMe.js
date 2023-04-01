@@ -2,7 +2,7 @@ import React from "react";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
 
-const ContactMe = () => {
+const ContactMe = ({ contact }) => {
 	const { register, handleSubmit } = useForm();
 	const onSubmit = (formData) => {
 		window.location.href = `mailto: kurtkweber@outlook.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
@@ -23,15 +23,15 @@ const ContactMe = () => {
 				<div className="space-y-4">
 					<div className="flex items-center space-x-5 justify-center">
 						<PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">123-456-7890</p>
+						<p className="text-2xl">{contact.phone}</p>
 					</div>
 					<div className="flex items-center space-x-5 justify-center">
 						<EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">lurt@lurt.com</p>
+						<p className="text-2xl">{contact.email}</p>
 					</div>
 					<div className="flex items-center space-x-5 justify-center">
 						<MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">Tampa, FL</p>
+						<p className="text-2xl">{contact.location}</p>
 					</div>
 					<form
 						onSubmit={handleSubmit(onSubmit)}
