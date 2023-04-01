@@ -22,11 +22,11 @@ const ExperienceCard = () => {
 				viewport={{ once: true }}
 				transition={{ duration: 1.2 }}
 			>
-				<img
+				{/* <Image
 					src="https://m.media-amazon.com/images/G/01/social_share/amazon_logo._CB635397845_.png"
 					className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
 					alt="company"
-				/>
+				/> */}
 			</motion.div>
 
 			<div className="px-0 md:px-10 xl:py-10">
