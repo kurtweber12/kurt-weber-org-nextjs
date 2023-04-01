@@ -2,16 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { urlFor } from "../sanity";
-import { useEffect } from "react";
-
-const uf_logo =
-	"https://pbs.twimg.com/profile_images/1560723870197288960/61QqIpfX_400x400.jpg";
 
 const EducationCard = ({ data }) => {
-	useEffect(() => {
-		console.log("CARD PAGE");
-		console.log(data);
-	});
 	return (
 		<motion.div
 			className="flex flex-row md:flex-col bg-neutral-900 p-4 md:w-[300px] rounded-lg md:items-center"

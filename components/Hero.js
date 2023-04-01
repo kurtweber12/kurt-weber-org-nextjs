@@ -6,8 +6,9 @@ import Image from "next/image";
 import gradpic from "../public/DSC04692.jpg";
 import Link from "next/link";
 import BackgroundCircles from "./BackgroundCircles";
+import { urlFor } from "../sanity";
 
-const Hero = () => {
+const Hero = ({ image }) => {
 	const [text, count] = useTypewriter({
 		words: ["", "UF grad", "Loves to learn", "Hockey fan"],
 		loop: true,
@@ -16,25 +17,27 @@ const Hero = () => {
 	return (
 		<div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
 			<BackgroundCircles />
-			<div>
+			<motion.div
+				initial={{
+					opacity: 0,
+				}}
+				animate={{
+					opacity: 1,
+				}}
+				transition={{
+					duration: 1,
+					delay: 0.5,
+				}}
+			>
 				<Image
-					src={gradpic}
+					src={urlFor(image).url()}
 					alt="Kurt Weber picture"
 					className="rounded-full h-48 w-48"
+					height={500}
+					width={500}
 				/>
-			</div>
-			{/* <motion.div
-                initial={{
-                    opacity: 0
-                }}
-                animate={{
-                    opacity: 1
-                }}
-                transition={{
-                    duration: 2,
-                    delay: 2
-                }}
-            > */}
+			</motion.div>
+
 			<div className="z-20">
 				<h2 className="text-sm uppercase text-neutral-500 pd-2 tracking-[15px] ml-[15px]">
 					Kurt Weber's Portfolio
@@ -43,21 +46,6 @@ const Hero = () => {
 					<span className="mr-2">{text}</span>
 					<Cursor cursorColor="#b45309" />
 				</h1>
-				{/* <div className='pt-5'>
-                    <Link href="#about">
-                        <button className='heroButton'>About</button>
-                    </Link>
-                    <Link href="#experience">
-                        <button className='heroButton'>Experience</button>
-                    </Link>
-                    <Link href="#skills">
-                        <button className='heroButton'>Skills</button>
-                    </Link>
-                    <Link href="#projects">
-                        <button className='heroButton'>Projects</button> 
-                    </Link>
-                </div> */}
-				{/* </motion.div> */}
 			</div>
 		</div>
 	);

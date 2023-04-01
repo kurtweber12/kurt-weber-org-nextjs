@@ -1,12 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import EducationCard from "./EducationCard";
-import { useEffect } from "react";
 
 const Education = ({ education }) => {
-	useEffect(() => {
-		console.log(education);
-	});
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}

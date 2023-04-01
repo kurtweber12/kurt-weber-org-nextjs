@@ -83,15 +83,7 @@ const Header = () => {
 							Contact
 						</p> */}
 						<EnvelopeIcon className="h-8 w-8 mx-2 " color="#737373" />
-						{/* <SocialIcon
-							className="cursor-pointer"
-							network="email"
-							fgColor="gray"
-							bgColor="transparent"
-						/> */}
-						{/* <p className='uppercase hidden md:inline-flex text-sm text-neutral-500'>Get In Touch</p> */}
 					</Link>
-					{/* <SocialIcon bgColor="transparent" fgColor="#737373" network="email" /> */}
 				</motion.div>
 			</div>
 			<motion.div

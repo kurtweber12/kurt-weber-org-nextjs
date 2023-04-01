@@ -65,7 +65,7 @@ export default function Home({
 			<Header />
 			<main>
 				<section id="hero" className="snap-start">
-					<Hero data={aboutMe} />
+					<Hero image={aboutMe?.about[0].imageref.image} />
 				</section>
 
 				<section id="about" className="snap-start">
