@@ -10,41 +10,52 @@ export const fetchAboutMe = async () => {
 
 	const about = await sanityClient.fetch(query);
 
-	const data = await about.json({ about });
+	//const data = await about.json({ about });
 
-	return data;
+	return about;
 };
 
 export const fetchSkills = async () => {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSkills`);
-
-	const data = await res.json();
+	const query = groq`
+		*[_type == 'skills']{
+			title, imageref->
+		}
+	`;
+	const data = await sanityClient.fetch(query);
 
 	return data;
 };
 
 export const fetchEducation = async () => {
-	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_BASE_URL}/api/getEducation`
-	);
+	const query = groq`
+		*[_type == 'education']{
+			school, priority, degree, graduation, imageref->
+		}
+	`;
 
-	const data = await res.json();
+	const data = await sanityClient.fetch(query);
 
 	return data;
 };
 
 export const fetchProjects = async () => {
-	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`
-	);
+	const query = groq`
+		*[_type == 'projects']{
+			...
+		}
+	`;
 
-	const data = await res.json();
+	const data = await sanityClient.fetch(query);
+
 	return data;
 };
 
 export const fetchContact = async () => {
-	const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getContact`);
-
-	const data = await res.json();
+	const query = groq`
+		*[_type == 'contact']{
+			...
+		}
+	`;
+	const data = await sanityClient.fetch(query);
 	return data;
 };

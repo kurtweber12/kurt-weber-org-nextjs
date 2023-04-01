@@ -11,3 +11,4 @@
 // 	const about = await sanityClient.fetch(query);
 // 	res.status(200).json({ about });
 // }
+//

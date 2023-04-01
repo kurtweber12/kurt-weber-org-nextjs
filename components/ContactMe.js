@@ -23,15 +23,15 @@ const ContactMe = ({ contact }) => {
 				<div className="space-y-4">
 					<div className="flex items-center space-x-5 justify-center">
 						<PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">{contact.phone}</p>
+						<p className="text-2xl">{contact?.phone}</p>
 					</div>
 					<div className="flex items-center space-x-5 justify-center">
 						<EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">{contact.email}</p>
+						<p className="text-2xl">{contact?.email}</p>
 					</div>
 					<div className="flex items-center space-x-5 justify-center">
 						<MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-						<p className="text-2xl">{contact.location}</p>
+						<p className="text-2xl">{contact?.location}</p>
 					</div>
 					<form
 						onSubmit={handleSubmit(onSubmit)}

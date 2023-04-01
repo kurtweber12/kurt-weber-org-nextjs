@@ -60,18 +60,18 @@ export default function Home({
 			<Header />
 			<main>
 				<section id="hero" className="snap-start">
-					<Hero image={aboutMe?.about[0].imageref.image} />
+					<Hero image={aboutMe[0]?.imageref.image} />
 				</section>
 
 				<section id="about" className="snap-start">
 					<About
-						text={aboutMe?.about[0].body[0].children[0].text}
-						image={aboutMe?.about[0]}
+						text={aboutMe[0]?.body[0].children[0].text}
+						image={aboutMe[0]}
 					/>
 				</section>
 
 				<section id="education" className="snap-center">
-					<Education education={education?.education} />
+					<Education education={education} />
 				</section>
 
 				{/* <section id="experience" className="snap-center">
@@ -79,18 +79,18 @@ export default function Home({
 				</section> */}
 
 				<section id="skills" className="snap-start">
-					<Skills skills={skills?.skills} />
+					<Skills skills={skills} />
 				</section>
 
 				{/* <section id="projects" className="snap-start">
 					<Projects />
 				</section> */}
 				<section id="projects" className="snap-start">
-					<ProjectsNew projects={projects?.projects} />
+					<ProjectsNew projects={projects} />
 				</section>
 
 				<section id="contact" className="snap-start">
-					<ContactMe contact={contact?.contact[0]} />
+					<ContactMe contact={contact[0]} />
 				</section>
 			</main>
 			<GoToTop />
