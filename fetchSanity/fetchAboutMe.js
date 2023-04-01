@@ -8,7 +8,7 @@ export const fetchAboutMe = async () => {
 		}
 	`;
 
-	const about = await sanityClient.fetch(query).json();
+	const about = await sanityClient.fetch(query);
 
 	const data = await about.json({ about });
 
