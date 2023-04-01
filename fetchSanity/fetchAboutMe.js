@@ -8,11 +8,11 @@ export const fetchAboutMe = async () => {
 		}
 	`;
 
-	const about = await sanityClient.fetch(query).json({ about });
+	const about = await sanityClient.fetch(query).json();
 
-	//const data = await about.json();
+	const data = await about.json({ about });
 
-	return about;
+	return data;
 };
 
 export const fetchSkills = async () => {
