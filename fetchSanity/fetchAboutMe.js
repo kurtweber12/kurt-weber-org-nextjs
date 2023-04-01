@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import { sanityClient } from "../../sanity";
+import { sanityClient } from "../sanity";
 
 export const fetchAboutMe = async () => {
 	const query = groq`
@@ -8,7 +8,9 @@ export const fetchAboutMe = async () => {
 		}
 	`;
 
-	const data = await query.json();
+	const about = await sanityClient.fetch(query);
+
+	const data = await about.json();
 
 	return data;
 };
