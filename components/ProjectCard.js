@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
 	return (
 		<article
 			className="flex flex-col xl:flex-row rounded-lg items-center space-y-7 flex-shrink-0 w-[100%] md:w-[600px] xl:w-[900px] snap-center bg-neutral-700/40 p-10 opacity-100  
-            md:opacity-40 hover:opacity-100 hover:cursor-pointer transition-opacity duration-200 overflow-y-hidden max-h-[500px]"
+            md:opacity-40 hover:opacity-100 transition-opacity duration-200 overflow-y-hidden max-h-[500px]"
 		>
 			<motion.div
 				initial={{
@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
 				}}
 				viewport={{ once: true }}
 				transition={{ duration: 1.2 }}
-				className="xl:w-64"
+				className="xl:w-64 flex-shrink-0"
 			>
 				<Image
 					src={urlFor(project?.image).url()}

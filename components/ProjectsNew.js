@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsNew = ({ projects }) => {
+	projects.sort(function (a, b) {
+		if (a.title < b.title) {
+			return -1;
+		}
+		if (a.title > b.title) {
+			return 1;
+		}
+		return 0;
+	});
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
