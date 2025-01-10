@@ -44,6 +44,9 @@ const Header = () => {
 					<Link href="#education">
 						<button className="heroButton">Education</button>
 					</Link>
+					<Link href="#courses">
+						<button className="heroButton">Courses</button>
+					</Link>
 					<Link href="#skills">
 						<button className="heroButton">Skills</button>
 					</Link>

@@ -17,14 +17,17 @@ import {
 	fetchProjects,
 	fetchSkills,
 	fetchContact,
+	fetchCourses,
 } from "../fetchSanity/fetchAboutMe";
 import { useEffect } from "react";
 import ProjectsNew from "../components/ProjectsNew";
+import Courses from "../components/Courses";
 
 export const getStaticProps = async () => {
 	const aboutMe = await fetchAboutMe();
 	const skills = await fetchSkills();
 	const education = await fetchEducation();
+	const courses = await fetchCourses();
 	const projects = await fetchProjects();
 	const contact = await fetchContact();
 
@@ -33,6 +36,7 @@ export const getStaticProps = async () => {
 			aboutMe,
 			skills,
 			education,
+			courses,
 			projects,
 			contact,
 		},
@@ -43,6 +47,7 @@ export default function Home({
 	aboutMe,
 	skills,
 	education,
+	courses,
 	projects,
 	contact,
 }) {
@@ -67,11 +72,16 @@ export default function Home({
 					<About
 						text={aboutMe[0]?.body[0].children[0].text}
 						image={aboutMe[0]}
+						data={aboutMe[0]}
 					/>
 				</section>
 
 				<section id="education" className="snap-center">
 					<Education education={education} />
+				</section>
+
+				<section id="courses" className="snap-start">
+					<Courses courses={courses} />
 				</section>
 
 				{/* <section id="experience" className="snap-center">

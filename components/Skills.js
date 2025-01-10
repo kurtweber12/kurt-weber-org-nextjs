@@ -28,7 +28,7 @@ const Skills = ({ skills }) => {
 			<h3 className="absolute top-24 uppercase tracking-[20px] ml-[20px] text-neutral-500 text-2xl">
 				Skills
 			</h3>
-			<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-5">
+			<div className="px-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-5">
 				{skills?.map((skill, i) => {
 					return <SkillCard skill={skill} key={i} />;
 				})}

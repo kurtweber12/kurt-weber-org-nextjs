@@ -26,10 +26,21 @@ export const fetchSkills = async () => {
 	return data;
 };
 
+export const fetchCourses = async () => {
+	const query = groq`
+		*[_type == 'courses']{
+			name, code, number, school, imageref-> 
+		}
+	`;
+	const data = await sanityClient.fetch(query);
+
+	return data;
+};
+
 export const fetchEducation = async () => {
 	const query = groq`
 		*[_type == 'education']{
-			school, priority, degree, graduation, imageref->
+			school, startdate, enddate, priority, degree, graduation, imageref->
 		}
 	`;
 

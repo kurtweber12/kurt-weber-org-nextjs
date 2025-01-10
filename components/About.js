@@ -5,8 +5,12 @@ import { AboutMe } from "../fetchSanity/fetchAboutMe";
 import gradpic from "../public/DSC04692.jpg";
 import Image from "next/image";
 import { useEffect } from "react";
+import { PortableText } from "@portabletext/react";
 
-const About = ({ text, image }) => {
+const About = ({ text, image, data }) => {
+	useEffect(() => {
+		console.log(data);
+	}, []);
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -71,7 +75,21 @@ const About = ({ text, image }) => {
 						This is a lot of random text lol This is a lot of random text lol
 						
 					</p> */}
-					<p className="font-light tracking-wide text-left">{text}</p>
+					{/* <PortableText
+						value={text.body}
+						className="font-light tracking-wide text-left"
+					/> */}
+					<div className="space-y-4">
+						{data?.body?.map((block, i) => {
+							return (
+								<p className="font-light tracking-wide text-left" key={i}>
+									{block.children?.map((child) => child.text).join(" ")}
+								</p>
+							);
+						})}
+					</div>
+
+					{/* <p className="font-light tracking-wide text-left">{text}</p> */}
 				</div>
 			</div>
 		</motion.div>

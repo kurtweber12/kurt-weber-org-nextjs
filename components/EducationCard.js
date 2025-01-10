@@ -26,8 +26,11 @@ const EducationCard = ({ data }) => {
 				</p>
 				<div className="md:border border-neutral-300 w-full md:mb-4" />
 				<p className="italic text-sm md:text-base">{data?.degree}</p>
-				<p className="pt-2 md:pt-0 text-xs md:text-base font-light tracking-wide">
+				{/* <p className="pt-2 md:pt-0 text-xs md:text-base font-light tracking-wide">
 					Graduation: {data?.graduation}
+				</p> */}
+				<p className="pt-2 md:pt-0 text-xs md:text-base font-light tracking-wide">
+					{data?.startdate} - {data?.enddate}
 				</p>
 			</div>
 		</motion.div>
