@@ -21,4 +21,8 @@
 		text-gray-500 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40
 		focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]/40
 	}
+
+	.goToTopButton {
+		@apply flex flex-row bg-neutral-900 py-2 px-4 rounded-full opacity-100 md:opacity-40 md:hover:opacity-100
+	}
 }
