@@ -22,6 +22,7 @@ import {
 import { useEffect } from "react";
 import ProjectsNew from "../components/ProjectsNew";
 import Courses from "../components/Courses";
+import Footer from "../components/Footer";
 
 export const getStaticProps = async () => {
 	const aboutMe = await fetchAboutMe();
@@ -101,6 +102,10 @@ export default function Home({
 
 				<section id="contact" className="snap-start">
 					<ContactMe contact={contact[0]} />
+				</section>
+
+				<section id="footer" className="snap-start">
+					<Footer />
 				</section>
 			</main>
 			<GoToTop />
