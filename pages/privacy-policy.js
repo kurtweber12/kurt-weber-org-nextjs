@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"; // Ensure Link is imported
 
 const PrivacyPolicy = () => {
 	return (
@@ -37,12 +38,12 @@ const PrivacyPolicy = () => {
 				This site uses Google AdSense and/or AdMob (via the linked AdSense
 				account) to monetize content. **Google, as a third-party vendor, uses
 				cookies to serve personalized and non-personalized ads** based on a
-				user's prior visits to this website or other websites.
+				user&apos;s prior visits to this website or other websites.
 			</p>
 			<p className="pb-6">
-				Google's use of advertising cookies enables it and its partners to serve
-				ads to our users based on their visit to our sites and/or other sites on
-				the Internet.
+				Google&apos;s use of advertising cookies enables it and its partners to
+				serve ads to our users based on their visit to our sites and/or other
+				sites on the Internet.
 			</p>
 
 			<h2 className="text-2xl pb-2">Your Choices and Opting Out</h2>
@@ -53,10 +54,10 @@ const PrivacyPolicy = () => {
 					className="text-blue-600 underline"
 				>
 					{" "}
-					Google's Ads Settings
+					Google&apos;s Ads Settings
 				</a>
-				. You can also direct users to opt out of some third-party vendors' use
-				of cookies for personalized advertising by visiting
+				. You can also direct users to opt out of some third-party vendors&apos;
+				use of cookies for personalized advertising by visiting
 				<a
 					href="https://www.aboutads.info/"
 					className="text-blue-600 underline"
@@ -67,7 +68,7 @@ const PrivacyPolicy = () => {
 				.
 			</p>
 
-			<h2 className="text-2xl pb-2">Children’s Privacy</h2>
+			<h2 className="text-2xl pb-2">Children&apos;s Privacy</h2>
 			<p className="pb-6">
 				Our apps and websites are not directed to children under the age of 13.
 				We do not knowingly collect personal data from children.
@@ -76,10 +77,10 @@ const PrivacyPolicy = () => {
 			<h2 className="text-2xl pb-2">Contact Us</h2>
 			<p>
 				If you have questions about this privacy policy, please reach out to us
-				using our dedicated
-				<a href="/#contact" className="text-blue-600 underline">
+				using our dedicated{" "}
+				<Link href="/#contact" className="text-blue-600 underline">
 					Contact Page
-				</a>
+				</Link>
 				.
 			</p>
 		</div>

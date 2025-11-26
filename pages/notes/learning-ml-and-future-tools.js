@@ -30,11 +30,12 @@ export default function LearningMLAndFutureTools() {
 
 			<p className="pb-6 text-gray-300 leading-relaxed">
 				I have been spending more time learning machine learning, both through
-				personal projects and through my master's program at Georgia Tech. I am
-				enrolled in the OMSCS program, and a lot of the classes I have taken
-				have pushed me to understand data, modeling, and evaluation in a deeper
-				way. Studying ML in grad school has given me a better foundation, and
-				building my own tools has helped me practice those ideas in real ways.
+				personal projects and through my master&apos;s program at Georgia Tech.
+				I am enrolled in the OMSCS program, and a lot of the classes I have
+				taken have pushed me to understand data, modeling, and evaluation in a
+				deeper way. Studying ML in grad school has given me a better foundation,
+				and building my own tools has helped me practice those ideas in real
+				ways.
 			</p>
 
 			<p className="pb-8 text-gray-300 leading-relaxed">
@@ -136,9 +137,9 @@ export default function LearningMLAndFutureTools() {
 			<hr className="border-gray-700 mb-8" />
 
 			<p className="text-gray-400 italic text-sm">
-				As I learn more about ML and continue through my master's program, I
-				will keep documenting my progress here. These projects are still early,
-				but they have already helped me become a stronger developer.
+				As I learn more about ML and continue through my master&apos;s program,
+				I will keep documenting my progress here. These projects are still
+				early, but they have already helped me become a stronger developer.
 			</p>
 		</div>
 	);
